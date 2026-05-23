@@ -136,7 +136,6 @@
             label = "ROTATE";
             #sensor-binding-cells = <0>;
             bindings = <&msc SCRL_UP>, <&msc SCRL_DOWN>;
-
             tap-ms = <20>;
         };
     };
@@ -146,74 +145,72 @@
 
         default_layer {
             bindings = <
-&kp Q             &kp W         &kp E         &kp R      &kp T                                    &kp Y      &kp U  &kp I     &kp O     &kp BACKSPACE
-&kp A             &kp S         &kp D         &kp F      &kp G      &none            &lt 5 COMMA  &kp H      &kp J  &kp K     &kp L     &lt 6 P
-&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V      &kp B      &kp ESC          &kp PERIOD   &kp N      &kp M  &mkp MB1  &mkp MB3  &kp SEMI
-&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt 1 F14  &lt 2 TAB  &lt 3 SPACE      &kp ENTER    &lt 4 F13                             &kp SLASH
+&kp Q             &kp W         &kp E         &kp R      &kp T                                          &kp Y      &kp U  &kp I      &kp O      &kp BACKSPACE
+&kp A             &kp S         &kp D         &kp F      &kp G      &none            &lt 5 COMMA  &kp H      &kp J  &kp K      &kp L      &lt 6 P
+&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V      &kp B      &kp ESC          &kp PERIOD   &kp N      &kp M  &mkp MB1   &mkp MB3   &kp SEMI
+&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt 1 F14  &lt 2 TAB  &lt 3 SPACE      &kp ENTER    &lt 4 F13                                     &kp SLASH
             >;
-
             sensor-bindings = <&inc_dec_kp LC(LG(RIGHT_ARROW)) LC(LG(LEFT_ARROW))>;
         };
 
         acad_1 {
             bindings = <
-&kp LS(LC(X))  &kp LC(LS(Y))  &scale       &chamfer  &kp LS(LA(LC(C)))                    &kp F1  &kp F2  &kp F3  &kp F4   &none
-&none          &none          &none        &none     &none              &none      &none  &none   &kp F5  &kp F6  &kp F7   &kp F8
-&none          &kp Y          &none        &none     &none              &none      &none  &kp F8  &none   &kp F9  &kp F10  &kp F11
-&kp F12        &none          &draw_order  &purge    &none              &none      &none  &none                            &none
+&kp LS(LC(X))  &kp LC(LS(Y))  &scale       &chamfer  &kp LS(LA(LC(C)))                         &kp F1  &kp F2  &kp F3   &kp F4   &none
+&none          &none          &none        &none     &none              &none           &none  &none   &kp F5  &kp F6   &kp F7   &kp F8
+&none          &kp Y          &none        &none     &none              &none           &none  &kp F8  &none   &kp F9   &kp F10  &kp F11
+&kp F12        &none          &draw_order  &purge    &none              &none           &none  &none                             &none
             >;
         };
 
         acad_2 {
             bindings = <
-&none                 &none    &explode  &macro_rotate  &trim                     &kp F1  &kp F2   &kp F3   &kp F4   &none
-&array_polar          &spline  &none     &none          &none  &none       &none  &kp F5  &kp F6   &kp F7   &kp F8   &none
-&none                 &none    &copy     &mirror        &none  &kp F8      &none  &kp F9  &kp F10  &kp F11  &kp F12  &none
-&kp LC(RC(NUMBER_4))  &none    &none     &none          &none  &none       &none  &none                              &none
+&none                 &none    &explode  &macro_rotate  &trim                                     &kp F1  &kp F2   &kp F3   &kp F4   &none
+&array_polar          &spline  &none     &none          &none   &none                 &none       &kp F5  &kp F6   &kp F7   &kp F8   &none
+&none                 &none    &copy     &mirror        &none   &kp F8                &none       &kp F9  &kp F10  &kp F11  &kp F12  &none
+&kp LC(RC(NUMBER_4))  &none    &none     &none          &none   &none                 &none       &none                                    &none
             >;
         };
 
         layer_num {
             bindings = <
-&mt LSHFT PLUS   &kp N7        &kp N8        &kp N9        &kp BACKSPACE                                    &kp EXCLAMATION  &kp AT_SIGN   &kp HASH       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
-&mt LSHFT MINUS  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp DELETE     &none          &kp DOUBLE_QUOTES  &kp DOLLAR       &kp PERCENT   &kp CARET      &kp LEFT_BRACE        &kp RIGHT_BRACE
-&mt LSHFT ASTRK  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp EQUAL      &kp ENTER      &kp SQT            &kp AMPERSAND    &kp ASTERISK  &kp BACKSLASH  &kp LEFT_BRACKET      &kp RIGHT_BRACKET
-&mt LSHFT SLASH  &kp N0        &kp PERIOD    &none         &none          &none          &kp MINUS          &kp TILDE                                                           &kp UNDERSCORE
+&mt LSHFT PLUS   &kp N7        &kp N8        &kp N9        &kp BACKSPACE                                          &kp EXCLAMATION  &kp AT_SIGN  &kp HASH       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
+&mt LSHFT MINUS  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp DELETE     &none              &kp DOUBLE_QUOTES    &kp DOLLAR       &kp PERCENT  &kp CARET      &kp LEFT_BRACE        &kp RIGHT_BRACE
+&mt LSHFT ASTRK  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp EQUAL      &kp ENTER          &kp SQT              &kp AMPERSAND    &kp ASTERISK &kp BACKSLASH  &kp LEFT_BRACKET      &kp RIGHT_BRACKET
+&mt LSHFT SLASH  &kp N0        &kp PERIOD    &none         &none          &none              &kp MINUS            &kp TILDE                                                          &kp UNDERSCORE
             >;
-
             sensor-bindings = <&inc_dec_kp C_VOLUME_DOWN C_VOL_UP>;
         };
 
         layer_mouse {
             bindings = <
-&none           &none         &none     &none      &none                    &none  &none           &kp UP_ARROW    &none            &kp HOME
-&none           &none         &none     &none      &none  &none      &none  &none  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp END
-&kp LEFT_SHIFT  &OTUKARE      &OSEWANI  &YOROSIKU  &none  &none      &none  &none  &none           &mkp MB4        &mkp MB5         &none
-&none           &kp LEFT_WIN  &none     &none      &none  &none      &none  &none                                                   &kp K_POWER
+&none           &none         &none     &none      &none                                     &none  &none           &kp UP_ARROW    &none            &kp HOME
+&none           &none         &none     &none      &none  &none               &none          &none  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp END
+&kp LEFT_SHIFT  &OTUKARE      &OSEWANI  &YOROSIKU  &none  &none               &none          &none  &none           &mkp MB4        &mkp MB5         &none
+&none           &kp LEFT_WIN  &none     &none      &none  &none               &none          &none                                                   &kp K_POWER
             >;
         };
 
         layer_bluetooth {
             bindings = <
-&none  &none  &none  &none  &none                          &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
-&none  &none  &none  &none  &none  &none      &none        &none         &none         &none         &none         &none
-&none  &none  &none  &none  &none  &none      &bootloader  &none         &none         &none         &none         &bt BT_CLR
-&none  &none  &none  &none  &none  &none      &none        &none                                                   &none
+&none  &none  &none  &none  &none                                       &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
+&none  &none  &none  &none  &none  &none                 &none          &none         &none         &none         &none         &none
+&none  &none  &none  &none  &none  &none                 &bootloader    &none         &none         &none         &none         &bt BT_CLR
+&none  &none  &none  &none  &none  &none                 &none          &none                                                   &none
             >;
         };
 
         layer_scroll {
             bindings = <
-&mt LSHFT PLUS   &kp N7        &kp N8        &kp N9        &kp BACKSPACE                        &none  &none              &kp LC(KP_PLUS)      &none            &none
-&mt LSHFT MINUS  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp DELETE     &none          &none  &none  &kp C_VOLUME_DOWN  &kp LC(KP_SUBTRACT)  &kp C_VOLUME_UP  &none
-&mt LSHFT ASTRK  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp EQUAL      &kp ENTER      &none  &none  &none              &none                &none            &none
-&mt LSHFT SLASH  &kp N0        &kp PERIOD    &none         &none          &none          &none  &none                                                           &none
+&mt LSHFT PLUS   &kp N7        &kp N8        &kp N9        &kp BACKSPACE                                     &none  &none              &kp LC(KP_PLUS)      &none            &none
+&mt LSHFT MINUS  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp DELETE     &none              &none           &none  &kp C_VOLUME_DOWN  &kp LC(KP_SUBTRACT)  &kp C_VOLUME_UP  &none
+&mt LSHFT ASTRK  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp EQUAL      &kp ENTER          &none           &none  &none              &none                &none            &none
+&mt LSHFT SLASH  &kp N0        &kp PERIOD    &none         &none          &none              &none           &none                                                           &none
             >;
         };
 
         layer_7 {
             bindings = <
-&trans  &kp LC(W)  &kp LC(W)  &kp LC(PAGE_UP)  &kp LC(PAGE_DOWN)                           &kp LC(W)      &kp LC(PAGE_UP)  &kp LC(PAGE_DOWN)  &trans  &trans
+&trans  &kp LC(W)  &kp LC(W)  &kp LC(PAGE_UP)  &kp LC(PAGE_DOWN)                                 &kp LC(W)      &kp LC(PAGE_UP)  &kp LC(PAGE_DOWN)  &trans  &trans
 &none   &trans     &mkp MB1   &mkp MB2         &mkp MB3           &trans      &trans       &mkp MB3       &mkp MB1         &mkp MB2           &trans  &none
 &trans  &trans     &mkp MB4   &mkp MB5         &mkp MB5           &trans      &trans       &trans         &mkp MB4         &mkp MB5           &trans  &trans
 &none   &trans     &trans     &trans           &trans             &trans      &kp PAGE_UP  &kp PAGE_DOWN                                              &trans
