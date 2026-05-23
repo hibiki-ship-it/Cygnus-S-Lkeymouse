@@ -147,7 +147,7 @@
         default_layer {
             bindings = <
 &kp Q             &kp W         &kp E         &kp R      &kp T                                    &kp Y      &kp U  &kp I     &kp O     &kp BACKSPACE
-&kp A             &kp S         &kp D         &kp F      &kp G      &none            &lt 5 COMMA  &kp H      &kp J  &kp K     &kp L     &lt 6 P
+&kp A             &kp S         &kp D         &kp F      &kp G      &kp LG(TAB)      &lt 5 COMMA  &kp H      &kp J  &kp K     &kp L     &lt 6 P
 &mt LEFT_SHIFT Z  &kp X         &kp C         &kp V      &kp B      &kp ESC          &kp PERIOD   &kp N      &kp M  &mkp MB1  &mkp MB3  &kp SEMI
 &kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt 1 F14  &lt 2 TAB  &lt 3 SPACE      &kp ENTER    &lt 4 F13                             &kp SLASH
             >;
@@ -157,10 +157,10 @@
 
         acad_1 {
             bindings = <
-&kp LS(LC(X))  &kp LC(LS(Y))  &scale  &chamfer  &kp LS(LA(LC(C)))                    &kp F1  &kp F2   &kp F3   &kp F4   &none
-&none          &none          &none   &none     &none              &none      &none  &kp F5  &kp F6   &kp F7   &kp F8   &none
-&none          &none          &none   &none     &none              &none      &none  &kp F9  &kp F10  &kp F11  &kp F12  &none
-&draw_order    &purge         &none   &none     &none              &none      &none  &none                              &none
+&kp LS(LC(X))  &kp LC(LS(Y))  &scale  &chamfer  &kp LS(LA(LC(C)))                     &kp F1  &kp F2   &kp F3   &kp F4   &none
+&none          &none          &none   &none     &none              &none       &none  &kp F5  &kp F6   &kp F7   &kp F8   &none
+&none          &none          &none   &none     &none              &kp F8      &none  &kp F9  &kp F10  &kp F11  &kp F12  &none
+&draw_order    &purge         &none   &none     &none              &none       &none  &none                              &none
             >;
         };
 
@@ -175,10 +175,10 @@
 
         layer_num {
             bindings = <
-&mt LSHFT PLUS   &kp N7        &kp N8        &kp N9        &kp BACKSPACE                                    &kp EXCLAMATION  &kp AT_SIGN   &kp HASH       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
-&mt LSHFT MINUS  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp DELETE     &none          &kp DOUBLE_QUOTES  &kp DOLLAR       &kp PERCENT   &kp CARET      &kp LEFT_BRACE        &kp RIGHT_BRACE
-&mt LSHFT ASTRK  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp EQUAL      &kp ENTER      &kp SQT            &kp AMPERSAND    &kp ASTERISK  &kp BACKSLASH  &kp LEFT_BRACKET      &kp RIGHT_BRACKET
-&mt LSHFT SLASH  &kp N0        &kp PERIOD    &none         &none          &none          &kp MINUS          &kp TILDE                                                           &kp UNDERSCORE
+&mt LSHFT PLUS   &kp N7        &kp N8        &kp N9        &kp BACKSPACE                                     &kp EXCLAMATION  &kp AT_SIGN   &kp HASH       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
+&mt LSHFT MINUS  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp DELETE     &kp K_MUTE      &kp DOUBLE_QUOTES  &kp DOLLAR       &kp PERCENT   &kp CARET      &kp LEFT_BRACE        &kp RIGHT_BRACE
+&mt LSHFT ASTRK  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp EQUAL      &kp ENTER       &kp SQT            &kp AMPERSAND    &kp ASTERISK  &kp BACKSLASH  &kp LEFT_BRACKET      &kp RIGHT_BRACKET
+&mt LSHFT SLASH  &kp N0        &kp PERIOD    &none         &none          &none           &kp MINUS          &kp TILDE                                                           &kp UNDERSCORE
             >;
 
             sensor-bindings = <&inc_dec_kp C_VOLUME_DOWN C_VOL_UP>;
