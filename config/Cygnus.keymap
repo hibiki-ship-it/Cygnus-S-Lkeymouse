@@ -2,7 +2,6 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/pointing.h>
-#include <input/processors.dtsi>   // ← 追加：Input Processorを使うための部品集
 
 #define ZMK_MOUSE_DEFAULT_SCRL_VAL 50
 
@@ -210,11 +209,3 @@
         };
     };
 };
-
-&trackball {
-    scroller {
-        layers = <6>;
-        input-processors = <&zip_xy_to_scroll_mapper>;
-    };
-};
-　
