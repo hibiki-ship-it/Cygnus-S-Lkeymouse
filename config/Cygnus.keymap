@@ -131,6 +131,7 @@
             tap-ms = <5>;
             bindings = <&kp F13 &kp D &kp O &kp U &kp Z &kp O &kp Y &kp O &kp R &kp O &kp S &kp I &kp K &kp U &kp O &kp N &kp E &kp G &kp A &kp I &kp I &kp T &kp A &kp S &kp I &kp M &kp A &kp S &kp U &kp DOT &kp SPACE &kp RET>;
             label = "YOROSIKU";
+         };
     };
 
     behaviors {
