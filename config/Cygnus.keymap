@@ -23,7 +23,7 @@
         };
 
         RCLK {
-            bindings = <&mkp RCLK>;
+            bindings = <&mkp MB2>;
             key-positions = <32 31>;
         };
 
@@ -206,7 +206,7 @@
         MOUSE {
             bindings = <
 &none           &none         &none     &none      &none                    &none  &none           &kp UP_ARROW    &none      &kp HOME
-&none           &none         &none     &none      &none  &none      &none  &none  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT  &kp END
+&none           &none         &none     &none      &none  &none      &none  &none  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp END
 &kp LEFT_SHIFT  &OTUKARE      &OSEWANI  &YOROSIKU  &none  &none      &none  &none  &none           &mkp MB4        &mkp MB5   &none
 &none           &kp LEFT_WIN  &none     &none      &none  &none      &none  &none                                             &kp K_POWER
             >;
