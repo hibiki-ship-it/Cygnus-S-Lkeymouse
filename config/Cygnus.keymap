@@ -211,8 +211,7 @@
     };
 };
 
-/* --- 追加：トラックボールのスクロール変換設定 --- */
-&trackball_listener {
+&pmw3610 {
     scroller {
         layers = <6>;
         input-processors = <&zip_xy_to_scroll_mapper>;
