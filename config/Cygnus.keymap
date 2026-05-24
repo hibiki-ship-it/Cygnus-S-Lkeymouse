@@ -132,8 +132,10 @@
         right_window: right_window {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&none>;
+            bindings = <&kp LG(RIGHT_ARROW) &kp LG(RIGHT_ARROW) &kp LG(UP_ARROW) &kp LG(UP_ARROW)>;
             label = "RIGHT_WINDOW";
+            wait-ms = <5>;
+            tap-ms = <5>;
         };
     };
 
@@ -153,29 +155,29 @@
 
         default_layer {
             bindings = <
-&kp Q             &kp W         &kp E         &kp R      &kp T                                    &kp Y      &kp U  &kp I     &kp O     &kp BACKSPACE
-&kp A             &kp S         &kp D         &kp F      &kp G      &kp LG(TAB)      &lt 5 COMMA  &kp H      &kp J  &kp K     &kp L     &lt 6 P
-&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V      &kp B      &kp ESC          &kp PERIOD   &kp N      &kp M  &mkp MB1  &mkp MB3  &lt 6 SEMI
-&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt 1 F14  &lt 2 TAB  &lt 3 SPACE      &kp ENTER    &lt 4 F13                             &kp SLASH
+&kp Q             &kp W         &kp E         &kp R      &kp T                                       &kp Y      &kp U  &kp I     &kp O     &kp BACKSPACE
+&kp A             &kp S         &kp D         &kp F      &kp G      &kp LG(K_CALC)      &lt 5 COMMA  &kp H      &kp J  &kp K     &kp L     &lt 6 P
+&mt LEFT_SHIFT Z  &kp X         &kp C         &kp V      &kp B      &kp ESC             &kp PERIOD   &kp N      &kp M  &mkp MB1  &mkp MB3  &lt 6 SEMI
+&kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt 1 F14  &lt 2 TAB  &lt 3 SPACE         &kp ENTER    &lt 4 F13                             &kp SLASH
             >;
 
-            sensor-bindings = <&inc_dec_kp LC(LG(RIGHT_ARROW)) LC(LG(LEFT_ARROW))>;
+            sensor-bindings = <&inc_dec_kp LG(RIGHT) LG(UP)>;
         };
 
         acad_1 {
             bindings = <
-&kp LS(LC(X))  &kp LC(LS(Y))  &scale  &chamfer  &kp LS(LA(LC(C)))                     &kp F1  &kp F2   &kp F3   &kp F4   &none
-&none          &none          &none   &none     &none              &none       &none  &kp F5  &kp F6   &kp F7   &kp F8   &none
-&none          &none          &none   &none     &none              &kp F8      &none  &kp F9  &kp F10  &kp F11  &kp F12  &none
-&draw_order    &purge         &none   &none     &none              &none       &none  &none                              &none
+&kp LS(LC(X))  &kp LC(LS(Y))  &scale  &chamfer  &kp LS(LA(LC(C)))                            &kp F1  &kp F2   &kp F3   &kp F4   &none
+&none          &none          &none   &none     &none              &kp LG(LS(S))      &none  &kp F5  &kp F6   &kp F7   &kp F8   &none
+&none          &none          &none   &none     &none              &kp F8             &none  &kp F9  &kp F10  &kp F11  &kp F12  &none
+&draw_order    &purge         &none   &none     &none              &none              &none  &none                              &none
             >;
         };
 
         acad_2 {
             bindings = <
 &none                 &none    &explode  &macro_rotate  &trim                     &kp F1  &kp F2   &kp F3   &kp F4   &none
-&array_polar          &spline  &none     &none          &none  &none       &none  &kp F5  &kp F6   &kp F7   &kp F8   &none
-&none                 &none    &copy     &mirror        &none  &kp F8      &none  &kp F9  &kp F10  &kp F11  &kp F12  &none
+&array_polar          &spline  &none     &none          &none  &trans      &none  &kp F5  &kp F6   &kp F7   &kp F8   &none
+&none                 &none    &copy     &mirror        &none  &trans      &none  &kp F9  &kp F10  &kp F11  &kp F12  &none
 &kp LC(RC(NUMBER_4))  &none    &none     &none          &none  &none       &none  &none                              &none
             >;
         };
@@ -193,10 +195,10 @@
 
         layer_mouse {
             bindings = <
-&none           &none         &none     &none      &none                    &none  &none           &kp UP_ARROW    &none            &kp HOME
-&none           &none         &none     &none      &none  &none      &none  &none  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp END
-&kp LEFT_SHIFT  &OTUKARE      &OSEWANI  &YOROSIKU  &none  &none      &none  &none  &none           &mkp MB4        &mkp MB5         &none
-&none           &kp LEFT_WIN  &none     &none      &none  &none      &none  &none                                                   &kp K_POWER
+&none           &none         &none     &none      &none                          &none  &none           &kp UP_ARROW    &none            &kp HOME
+&none           &none         &none     &none      &none  &kp LG(TAB)      &none  &none  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp END
+&kp LEFT_SHIFT  &OTUKARE      &OSEWANI  &YOROSIKU  &none  &none            &none  &none  &none           &mkp MB4        &mkp MB5         &none
+&none           &kp LEFT_WIN  &none     &none      &none  &none            &none  &none                                                   &kp K_POWER
             >;
         };
 
@@ -211,10 +213,10 @@
 
         layer_scroll {
             bindings = <
-&mt LSHFT PLUS   &kp N7        &kp N8        &kp N9        &kp BACKSPACE                        &none  &none              &kp LC(KP_PLUS)      &none            &none
-&mt LSHFT MINUS  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp DELETE     &none          &none  &none  &kp C_VOLUME_DOWN  &kp LC(KP_SUBTRACT)  &kp C_VOLUME_UP  &none
-&mt LSHFT ASTRK  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp EQUAL      &kp ENTER      &none  &none  &none              &none                &none            &none
-&mt LSHFT SLASH  &kp N0        &kp PERIOD    &none         &none          &none          &none  &none                                                           &none
+&mt LSHFT PLUS   &kp N7        &kp N8        &kp N9        &kp BACKSPACE                        &none  &none  &kp LC(PAGE_UP)    &none  &none
+&mt LSHFT MINUS  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp DELETE     &none          &none  &none  &none  &kp LC(PAGE_DOWN)  &none  &none
+&mt LSHFT ASTRK  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp EQUAL      &kp ENTER      &none  &none  &none  &none              &none  &none
+&mt LSHFT SLASH  &kp N0        &kp PERIOD    &none         &none          &none          &none  &none                                   &none
             >;
         };
     };
