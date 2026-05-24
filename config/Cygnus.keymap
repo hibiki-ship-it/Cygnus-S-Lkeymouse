@@ -213,10 +213,10 @@
 
         layer_scroll {
             bindings = <
-&mt LSHFT PLUS   &kp N7        &kp N8        &kp N9        &kp BACKSPACE                        &none  &none  &none            &none              &none
-&mt LSHFT MINUS  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp DELETE     &none          &none  &none  &none  &kp PAGE_UP      &kp PAGE_DOWN      &none
-&mt LSHFT ASTRK  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp EQUAL      &kp ENTER      &none  &none  &none  &kp LC(PAGE_UP)  &kp LC(PAGE_DOWN)  &none
-&mt LSHFT SLASH  &kp N0        &kp PERIOD    &none         &none          &none          &none  &none                                             &none
+&mt LSHFT PLUS   &kp N7        &kp N8        &kp N9        &kp BACKSPACE                          &none  &none  &none            &none              &none
+&mt LSHFT MINUS  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp DELETE     &kp LG(TAB)      &none  &none  &none  &kp PAGE_UP      &kp PAGE_DOWN      &none
+&mt LSHFT ASTRK  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp EQUAL      &kp ENTER        &none  &none  &none  &kp LC(PAGE_UP)  &kp LC(PAGE_DOWN)  &none
+&mt LSHFT SLASH  &kp N0        &kp PERIOD    &none         &none          &none            &none  &none                                             &none
             >;
         };
     };
