@@ -132,16 +132,16 @@
         right_window: right_window {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            wait-ms = <100>;
-            tap-ms = <60>;
+                wait-ms = <200>;
+            tap-ms = <100>;
             bindings = <&kp LG(RIGHT) &kp LG(RIGHT) &kp LG(UP) &kp LG(UP)>;
         };
 
         left_window: left_window {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            wait-ms = <100>;
-            tap-ms = <60>;
+            wait-ms = <200>;
+            tap-ms = <100>;
             bindings = <&kp LG(LEFT) &kp LG(LEFT) &kp LG(UP) &kp LG(UP)>;
         };
     };
