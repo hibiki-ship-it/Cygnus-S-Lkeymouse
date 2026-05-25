@@ -182,11 +182,12 @@
             compatible = "zmk,behavior-sensor-rotate";
             label = "ALT_TAB";
             #sensor-binding-cells = <0>;
+
             // 上回転（右）でTab、下回転（左）でShift+Tab
             // ※Altがロックされた状態でTabが送られるため、結果としてウィンドウが右・左に切り替わります
+
             bindings = <&kp TAB>, <&kp LS(TAB)>;
         };
-
     };
 
     keymap {
@@ -200,45 +201,48 @@
 &kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt 1 F14  &lt 2 TAB  &lt 3 SPACE        &kp ENTER    &lt 4 F13                             &kp SLASH
             >;
 
-            sensor-bindings = <&sensor_alttab>;
+            sensor-bindings = <&inc_dec_kp LC(PAGE_UP) LC(PAGE_DOWN)>;
         };
 
         acad_1 {
             bindings = <
-&kp LS(LC(X))  &kp LC(LS(Y))  &scale  &chamfer  &kp LS(LA(LC(C)))                            &kp F1  &kp F2   &kp F3   &kp F4   &none
-&none          &none          &none   &none     &none              &kp C_MUTE         &none  &kp F5  &kp F6   &kp F7   &kp F8   &none
-&none          &none          &none   &none     &none              &kp F8             &none  &kp F9  &kp F10  &kp F11  &kp F12  &none
-&draw_order    &purge         &none   &none     &none              &none              &none  &none                              &none
+&kp LS(LC(X))  &kp LC(LS(Y))  &scale  &chamfer  &kp LS(LA(LC(C)))                         &kp F1  &kp F2   &kp F3   &kp F4   &none
+&none          &none          &none   &none     &none              &kp C_MUTE      &none  &kp F5  &kp F6   &kp F7   &kp F8   &none
+&none          &none          &none   &none     &none              &kp F8          &none  &kp F9  &kp F10  &kp F11  &kp F12  &none
+&draw_order    &purge         &none   &none     &none              &none           &none  &none                              &none
             >;
+
             sensor-bindings = <&inc_dec_kp C_VOLUME_DOWN C_VOL_UP>;
         };
 
         acad_2 {
             bindings = <
-&none                 &none    &explode  &macro_rotate  &trim                            &kp F1  &kp F2   &kp F3   &kp F4   &none
+&none                 &none    &explode  &macro_rotate  &trim                         &kp F1  &kp F2   &kp F3   &kp F4   &none
 &array_polar          &spline  &none     &none          &none  &kp C_MUTE      &none  &kp F5  &kp F6   &kp F7   &kp F8   &none
-&none                 &none    &copy     &mirror        &none  &kp F8             &none  &kp F9  &kp F10  &kp F11  &kp F12  &none
-&kp LC(RC(NUMBER_4))  &none    &none     &none          &none  &none              &none  &none                              &none
+&none                 &none    &copy     &mirror        &none  &kp F8          &none  &kp F9  &kp F10  &kp F11  &kp F12  &none
+&kp LC(RC(NUMBER_4))  &none    &none     &none          &none  &none           &none  &none                              &none
             >;
+
             sensor-bindings = <&inc_dec_kp C_VOLUME_DOWN C_VOL_UP>;
         };
 
         layer_num {
             bindings = <
-&mt LSHFT PLUS   &kp N7        &kp N8        &kp N9        &kp BACKSPACE                                     &kp EXCLAMATION  &kp AT_SIGN   &kp HASH       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
-&mt LSHFT MINUS  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp DELETE     &kp C_AL_CALC       &kp DOUBLE_QUOTES  &kp DOLLAR       &kp PERCENT   &kp CARET      &kp LEFT_BRACE        &kp RIGHT_BRACE
-&mt LSHFT ASTRK  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp EQUAL      &kp ENTER       &kp SQT            &kp AMPERSAND    &kp ASTERISK  &kp BACKSLASH  &kp LEFT_BRACKET      &kp RIGHT_BRACKET
-&mt LSHFT SLASH  &kp N0        &kp PERIOD    &none         &none          &none           &kp MINUS          &kp TILDE                                                           &kp UNDERSCORE
+&mt LSHFT PLUS   &kp N7        &kp N8        &kp N9        &kp BACKSPACE                                        &kp EXCLAMATION  &kp AT_SIGN   &kp HASH       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
+&mt LSHFT MINUS  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp DELETE     &kp C_AL_CALC      &kp DOUBLE_QUOTES  &kp DOLLAR       &kp PERCENT   &kp CARET      &kp LEFT_BRACE        &kp RIGHT_BRACE
+&mt LSHFT ASTRK  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp EQUAL      &kp ENTER          &kp SQT            &kp AMPERSAND    &kp ASTERISK  &kp BACKSLASH  &kp LEFT_BRACKET      &kp RIGHT_BRACKET
+&mt LSHFT SLASH  &kp N0        &kp PERIOD    &none         &none          &none              &kp MINUS          &kp TILDE                                                           &kp UNDERSCORE
             >;
 
+            sensor-bindings = <&inc_dec_kp PAGE_UP PAGE_DOWN>;
         };
 
         layer_mouse {
             bindings = <
-&none           &none         &none     &none      &none                                  &none  &none           &kp UP_ARROW    &none            &kp HOME
-&none           &none         &none     &none      &none  &kp LG(LS(S))    &left_window   &none  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp END
-&kp LEFT_SHIFT  &OTUKARE      &OSEWANI  &YOROSIKU  &none  &none            &right_window  &none  &none           &mkp MB4        &mkp MB5         &none
-&none           &kp LEFT_WIN  &none     &none      &none  &none            &none          &none                                                   &kp K_POWER
+&none           &none         &none     &none      &none                                    &none  &none           &kp UP_ARROW    &none            &kp HOME
+&none           &none         &none     &none      &none  &kp LG(LS(S))      &left_window   &none  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp END
+&kp LEFT_SHIFT  &OTUKARE      &OSEWANI  &YOROSIKU  &none  &none              &right_window  &none  &none           &mkp MB4        &mkp MB5         &none
+&none           &kp LEFT_WIN  &none     &none      &none  &none              &none          &none                                                   &kp K_POWER
             >;
         };
 
@@ -253,10 +257,10 @@
 
         layer_scroll {
             bindings = <
-&mt LSHFT PLUS   &kp N7        &kp N8        &kp N9        &kp BACKSPACE                          &none  &none  &none            &none              &none
-&mt LSHFT MINUS  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp DELETE     &kp LG(LS(S))    &none  &none  &none  &kp PAGE_UP      &kp PAGE_DOWN      &none
-&mt LSHFT ASTRK  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp EQUAL      &kp ENTER        &none  &none  &none  &kp LC(PAGE_UP)  &kp LC(PAGE_DOWN)  &none
-&mt LSHFT SLASH  &kp N0        &kp PERIOD    &none         &none          &none            &none  &none                                             &none
+&mt LSHFT PLUS   &kp N7        &kp N8        &kp N9        &kp BACKSPACE                            &none  &none  &none            &none              &none
+&mt LSHFT MINUS  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp DELETE     &kp LG(LS(S))      &none  &none  &none  &kp PAGE_UP      &kp PAGE_DOWN      &none
+&mt LSHFT ASTRK  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp EQUAL      &kp ENTER          &none  &none  &none  &kp LC(PAGE_UP)  &kp LC(PAGE_DOWN)  &none
+&mt LSHFT SLASH  &kp N0        &kp PERIOD    &none         &none          &none              &none  &none                                             &none
             >;
         };
     };
