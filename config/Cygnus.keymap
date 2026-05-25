@@ -133,7 +133,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <400>;
-            tap-ms = <100>;
+            tap-ms = <400>;
             bindings = <&kp LG(RIGHT) &kp LG(RIGHT) &kp LG(UP) &kp LG(UP)>;
         };
 
@@ -141,7 +141,7 @@
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
             wait-ms = <400>;
-            tap-ms = <100>;
+            tap-ms = <400>;
             bindings = <&kp LG(LEFT) &kp LG(LEFT) &kp LG(UP) &kp LG(UP)>;
         };
     };
