@@ -200,7 +200,7 @@
 &kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt 1 F14  &lt 2 TAB  &lt 3 SPACE        &kp ENTER    &lt 4 F13                             &kp SLASH
             >;
 
-            sensor-bindings = <&sensor_window>;
+            sensor-bindings = <&sensor_alttab>;
         };
 
         acad_1 {
