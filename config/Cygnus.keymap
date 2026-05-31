@@ -181,6 +181,36 @@
                 , <&macro_release &kp LCTRL>
                 ;
         };
+
+        // ① kyohei 24 + Enter
+        pass_1: pass_1 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <50>;
+            tap-ms = <50>;
+            bindings = <&kp K &kp Y &kp O &kp H &kp E &kp I &kp SPACE &kp N2 &kp N4 &kp RET>;
+            label = "PASS_1";
+        };
+
+        // ② daiko1 + Enter
+        pass_2: pass_2 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <50>;
+            tap-ms = <50>;
+            bindings = <&kp D &kp A &kp I &kp K &kp O &kp N1 &kp RET>;
+            label = "PASS_2";
+        };
+
+        // ③ Kyohei-24 + Enter
+        pass_3: pass_3 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            wait-ms = <50>;
+            tap-ms = <50>;
+            bindings = <&kp LS(K) &kp Y &kp O &kp H &kp E &kp I &kp MINUS &kp N2 &kp N4 &kp RET>;
+            label = "PASS_3";
+        };
     };
 
     behaviors {
@@ -274,10 +304,10 @@
 
         layer_mouse {
             bindings = <
-&none           &none         &none     &none      &none                                    &none  &none           &kp UP_ARROW    &none            &kp HOME
-&none           &none         &none     &none      &none  &kp LG(LS(S))      &left_window   &none  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp END
-&kp LEFT_SHIFT  &OTUKARE      &OSEWANI  &YOROSIKU  &none  &none              &right_window  &none  &none           &mkp MB4        &mkp MB5         &none
-&none           &kp LEFT_WIN  &none     &none      &none  &none              &none          &none                                                   &kp K_POWER
+&none           &none         &none     &none      &none                                   　 &none  &none           &kp UP_ARROW    &none            &kp HOME
+&none           &none         &none     &none      &none    &kp LG(LS(S))      &left_window   &none  &kp LEFT_ARROW  &kp DOWN_ARROW  &kp RIGHT_ARROW  &kp END
+&kp LEFT_SHIFT  &OTUKARE      &OSEWANI  &YOROSIKU  &none    &none              &right_window  &none  &none           &mkp MB4        &mkp MB5         &none
+&none           &kp LEFT_WIN  &none     &PASS_1    &PASS_2  &PASS_3            &none          &none                                                   &kp K_POWER
             >;
         };
 
