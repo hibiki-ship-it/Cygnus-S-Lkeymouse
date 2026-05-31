@@ -186,9 +186,9 @@
         pass_1: pass_1 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            wait-ms = <50>;
-            tap-ms = <50>;
-            bindings = <&kp K &kp Y &kp O &kp H &kp E &kp I &kp SPACE &kp N2 &kp N4 &kp RET>;
+            wait-ms = <40>;
+            tap-ms = <30>;
+            bindings = <&kp K &kp Y &kp O &kp H &kp E &kp I &kp N2 &kp N4 &kp RET>;
             label = "PASS_1";
         };
 
@@ -196,8 +196,8 @@
         pass_2: pass_2 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            wait-ms = <50>;
-            tap-ms = <50>;
+            wait-ms = <40>;
+            tap-ms = <30>;
             bindings = <&kp D &kp A &kp I &kp K &kp O &kp N1 &kp RET>;
             label = "PASS_2";
         };
@@ -206,8 +206,8 @@
         pass_3: pass_3 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            wait-ms = <50>;
-            tap-ms = <50>;
+            wait-ms = <40>;
+            tap-ms = <30>;
             bindings = <&kp LS(K) &kp Y &kp O &kp H &kp E &kp I &kp MINUS &kp N2 &kp N4 &kp RET>;
             label = "PASS_3";
         };
