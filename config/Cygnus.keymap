@@ -214,15 +214,14 @@
             bindings = <&right_window>, <&left_window>;
         };
 
-        // --- 修正：マウス専用のHold-Tap ---
         ht_mouse: hold_tap_mouse {
             compatible = "zmk,behavior-hold-tap";
             label = "HOLD_TAP_MOUSE";
-            // 0に変更し、この動作専用に独立させます
-            #binding-cells = <0>;
+            
+            #binding-cells = <2>;
+            
             tapping-term-ms = <200>;
             flavor = "hold-preferred";
-            // 上で作った確実なマクロを呼び出す
             bindings = <&macro_mclk>, <&macro_rclk>;
         };
     };
