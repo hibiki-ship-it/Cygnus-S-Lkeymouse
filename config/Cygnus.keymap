@@ -195,6 +195,16 @@
             bindings = <&right_window>, <&left_window>;
         };
 
+        sensor_zoom: sensor_zoom {
+            compatible = "zmk,behavior-sensor-rotate";
+            label = "ZOOM";
+            #sensor-binding-cells = <0>;
+            // Ctrl + プラス / Ctrl + マイナス を送信
+            bindings = <&kp LC(PLUS)>, <&kp LC(MINUS)>;
+            // OSが認識できるよう、しっかり長さを確保
+            tap-ms = <30>;
+        };
+
         // --- マクロを通さず直接マウス入力を呼び出す（押しっぱなし解消） ---
         ht_mouse: hold_tap_mouse {
             compatible = "zmk,behavior-hold-tap";
@@ -218,8 +228,7 @@
 &kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt 1 F14  &lt 2 TAB  &lt 3 SPACE        &kp ENTER    &lt 4 F13                              &kp SLASH
             >;
 
-            // ▼ ブラウザ・PDF用に Windowsのズームショートカット(Ctrl + / -) を割り当て
-            sensor-bindings = <&inc_dec_kp LC(KP_PLUS) LC(KP_MINUS)>;
+            sensor-bindings = <&sensor_zoom>;
         };
 
         acad_1 {
@@ -247,7 +256,7 @@
 &mt LSHFT PLUS   &kp N7        &kp N8        &kp N9        &kp BACKSPACE                                     &kp EXCLAMATION  &kp AT_SIGN   &kp HASH       &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS
 &mt LSHFT MINUS  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp DELETE     &kp C_AL_CALC   &kp DOUBLE_QUOTES  &kp DOLLAR       &kp PERCENT   &kp CARET      &kp LEFT_BRACE        &kp RIGHT_BRACE
 &mt LSHFT ASTRK  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp EQUAL      &kp ENTER       &kp SQT            &kp AMPERSAND    &kp ASTERISK  &kp BACKSLASH  &kp LEFT_BRACKET      &kp RIGHT_BRACKET
-&mt LSHFT SLASH  &kp N0        &kp N0        &kp PERIOD    &none          &none           &kp MINUS          &kp TILDE                                                           &kp UNDERSCORE
+&mt LSHFT SLASH  &kp N0        &kp N0        &kp PERIOD    &kp PERIOD     &none           &kp MINUS          &kp TILDE                                                           &kp UNDERSCORE
             >;
             sensor-bindings = <&inc_dec_kp PAGE_UP PAGE_DOWN>;
         };
