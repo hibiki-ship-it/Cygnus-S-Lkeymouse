@@ -132,7 +132,7 @@
         right_window: right_window {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            wait-ms = <200>;
+            wait-ms = <250>;
             tap-ms = <30>;
             bindings =
                 <&macro_press>, <&kp LEFT_WIN>,
@@ -143,7 +143,7 @@
         left_window: left_window {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            wait-ms = <200>;
+            wait-ms = <250>;
             tap-ms = <30>;
             bindings =
                 <&macro_press>, <&kp LEFT_WIN>,
@@ -200,7 +200,7 @@
             label = "ZOOM";
             #sensor-binding-cells = <0>;
             // Ctrl + プラス / Ctrl + マイナス を送信
-            bindings = <&kp LC(PLUS)>, <&kp LC(MINUS)>;
+            bindings = <&kp LC(MINUS)>,<&kp LC(PLUS)> ;
             // OSが認識できるよう、しっかり長さを確保
             tap-ms = <30>;
         };
