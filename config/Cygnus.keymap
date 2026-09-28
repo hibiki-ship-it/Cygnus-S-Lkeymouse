@@ -129,28 +129,6 @@
             label = "YOROSIKU";
         };
 
-        right_window: right_window {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <250>;
-            tap-ms = <30>;
-            bindings =
-                <&macro_press>, <&kp LEFT_WIN>,
-                <&macro_tap>, <&kp RIGHT &kp RIGHT &kp UP &kp UP>,
-                <&macro_release>, <&kp LEFT_WIN>;
-        };
-
-        left_window: left_window {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            wait-ms = <250>;
-            tap-ms = <30>;
-            bindings =
-                <&macro_press>, <&kp LEFT_WIN>,
-                <&macro_tap>, <&kp LEFT &kp LEFT &kp UP &kp UP>,
-                <&macro_release>, <&kp LEFT_WIN>;
-        };
-
         pass_1: pass_1 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -174,7 +152,7 @@
             #binding-cells = <0>;
             wait-ms = <40>;
             tap-ms = <30>;
-            bindings = <&kp LS(K) &kp Y &kp O &kp H &kp E &kp I &kp MINUS &kp N2 &kp N4 &kp RET>;
+            bindings = <&kp LS(M) &kp A &kp T &kp S &kp U &kp LS(K) &kp Y &kp O &kp H &kp E &kp I &kp MINUS &kp N2 &kp N4 &kp RET>;
             label = "PASS_3";
         };
     };
@@ -228,7 +206,7 @@
 &kp LCTRL         &kp LEFT_WIN  &kp LEFT_ALT  &lt 1 F14  &lt 2 TAB  &lt 3 SPACE        &kp ENTER    &lt 4 F13                              &kp SLASH
             >;
 
-            sensor-bindings = <&sensor_zoom>;
+            sensor-bindings = <&inc_dec_kp C_VOLUME_DOWN C_VOL_UP>;
         };
 
         acad_1 {
@@ -258,15 +236,15 @@
 &mt LSHFT ASTRK  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp EQUAL      &kp ENTER       &kp SQT            &kp AMPERSAND    &kp ASTERISK  &kp BACKSLASH  &kp LEFT_BRACKET      &kp RIGHT_BRACKET
 &mt LSHFT SLASH  &kp N0        &kp N0        &kp PERIOD    &kp PERIOD     &none           &kp MINUS          &kp TILDE                                                           &kp UNDERSCORE
             >;
-            sensor-bindings = <&inc_dec_kp PAGE_UP PAGE_DOWN>;
+            sensor-bindings =  <&inc_dec_kp C_VOLUME_DOWN C_VOL_UP>;
         };
 
         layer_mouse {
             bindings = <
-&none           &none         &none     &none      &none                                    &none  &kp LC(LG(LEFT))  &kp UP_ARROW    &kp LC(LG(RIGHT))   &kp HOME
-&none           &none         &none     &none      &none  &kp LG(LS(S))      &left_window   &none  &kp LEFT_ARROW    &kp DOWN_ARROW  &kp RIGHT_ARROW     &kp END
-&kp LEFT_SHIFT  &OTUKARE      &OSEWANI  &YOROSIKU  &none  &none              &right_window  &none  &none             &mkp MB4        &mkp MB5            &none
-&none           &kp LEFT_WIN  &none     &pass_1    &pass_2 &pass_3           &none          &none                                                        &kp K_POWER
+&none           &none         &none     &none      &none                                    &kp LG(UP)  &kp LS(LG(LEFT))  &kp UP_ARROW    &kp LS(LG(RIGHT))   &kp HOME
+&none           &none         &none     &none      &none  &kp LG(LS(S))      &kp LG(LEFT)   &none       &kp LEFT_ARROW    &kp DOWN_ARROW  &kp RIGHT_ARROW     &kp END
+&kp LEFT_SHIFT  &OTUKARE      &OSEWANI  &YOROSIKU  &none  &none              &kp LG(RIGHT)  &none       &none             &mkp MB4        &mkp MB5            &none
+&none           &kp LEFT_WIN  &none     &pass_1    &pass_2 &pass_3           &none          &none                                                             &kp K_POWER
             >;
         };
 
@@ -282,7 +260,7 @@
         layer_scroll {
             bindings = <
 &mt LSHFT PLUS   &kp N7        &kp N8        &kp N9        &kp BACKSPACE                                  &none  &none  &none            &none              &none
-&mt LSHFT MINUS  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp DELETE     &kp C_AL_CALC            &none  &none  &none  &kp PAGE_UP      &kp PAGE_DOWN      &none
+&mt LSHFT MINUS  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp DELETE     &kp C_AL_CALC            &none  &none  &none  &none            &none              &none
 &mt LSHFT ASTRK  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp EQUAL      &kp ENTER                &none  &none  &none  &kp LC(PAGE_UP)  &kp LC(PAGE_DOWN)  &none
 &mt LSHFT SLASH  &kp N0        &kp N0        &kp PERIOD    &kp PERIOD     &none                    &none  &none                                             &none
             >;
