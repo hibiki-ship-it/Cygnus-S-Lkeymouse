@@ -166,13 +166,6 @@
             tap-ms = <20>;
         };
 
-        sensor_window: sensor_window {
-            compatible = "zmk,behavior-sensor-rotate";
-            label = "WINDOW_MOVE";
-            #sensor-binding-cells = <0>;
-            bindings = <&right_window>, <&left_window>;
-        };
-
         sensor_zoom: sensor_zoom {
             compatible = "zmk,behavior-sensor-rotate";
             label = "ZOOM";
